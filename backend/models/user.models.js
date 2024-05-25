@@ -16,7 +16,6 @@ const userSchema = new mongoose.Schema(
       required: true,
       minLength: 6,
     },
-
     email: {
       type: String,
       required: true,
@@ -36,7 +35,18 @@ const userSchema = new mongoose.Schema(
         default: [],
       },
     ],
-    profileImg: {},
+    profileImg: {
+      type: String,
+      default: "",
+    },
+    bio: {
+      type: String,
+      default: "",
+    },
+    link: {
+      type: String,
+      default: "",
+    },
   },
   { timestamps: true }
 );
